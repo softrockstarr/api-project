@@ -34,7 +34,7 @@ app.get('/api/:name', (request, response) => { //this is where people go to acce
     }   
 })
 
-app.listen(PORT, () => { //we declared PORT as a variable above
+app.listen(process.env.PORT || PORT, () => { //we declared PORT as a variable above. the process.env is for Cyclic
     console.log(`The server is now running on port ${PORT}.`) //this is how you test your server is running.
 })
 
